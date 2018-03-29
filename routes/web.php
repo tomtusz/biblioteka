@@ -14,4 +14,6 @@
 Route::get('/','BookController@index');
 
 Route::resource('books', 'BookController')->except(['show']);
-Route::get('author', 'AuthorController@index');
+Route::resource('author', 'AuthorController')->only([
+    'index', 'create', 'store'
+]);

@@ -29,5 +29,8 @@
 <div class="form-group">
   <div  class="col-md-12 control-label">
     <button type="submit" class="btn btn-info">Zapisz książkę: <span class="glyphicon glyphicon-floppy-save"></span></button>
+    <a href="{{ action('BookController@index') }}" class="btn btn-info"> Anuluj
+      <span class="glyphicon glyphicon-remove"></span>
+    </a>
   </div>
 </div>
