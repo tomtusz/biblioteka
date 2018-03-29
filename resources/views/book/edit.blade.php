@@ -15,4 +15,10 @@
     </div>
 </div>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#authorSelect option[value='{{$book->author->id}}']").attr('selected','selected');
+  });
+</script>
+
 @stop

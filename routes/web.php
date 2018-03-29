@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','BookController@index');
+
 Route::resource('books', 'BookController')->except(['show']);
 Route::get('author', 'AuthorController@index');

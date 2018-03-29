@@ -43,6 +43,7 @@ class BookController extends Controller
     public function store(CreateBookRequest $request)
     {
       Book::create($request->all());
+      session()->flash('status', 'Książkę dodano!');
       return redirect('books');
     }
 
@@ -80,6 +81,7 @@ class BookController extends Controller
     {
       $book = Book::findOrFail($book->id);
       $book->update($request->all());
+      session()->flash('status', 'Książkę zapisano!');
       return redirect('books');
     }
 
@@ -91,6 +93,9 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+      $book = Book::findOrFail($book->id);
+      $book->delete();
+      session()->flash('status', 'Książkę usunięto!');
+      return redirect('books');  //
     }
 }

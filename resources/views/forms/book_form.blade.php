@@ -11,9 +11,9 @@
     {!! Form::label('author_id','Autor:') !!}
   </div>
   <div class="col-md-6">
-    <select class="form-control" name="author_id" placeholder="Wybierz autora...">
+    <select id="authorSelect" class="form-control" name="author_id" placeholder="Wybierz autora...">
       @foreach ($authors as $author)
-         <option value="{{$author->id}}">{{$author->name." ".$author->surname}}</option>
+         <option value="{{$author->id}}" >{{$author->name." ".$author->surname}}</option>
       @endforeach
     </select>
   </div>

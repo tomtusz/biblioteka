@@ -12,6 +12,8 @@
 
 <div class="container-fluid">
   <h1>Biblioteka</h1>
+  <a href="{{action('BookController@index')}}" class="btn btn-info">Kięgozbiór</a>
+  <a href="{{action('AuthorController@index')}}" class="btn btn-info">Autorzy</a>
   <div class="row">
       @yield('content')
   </div>
